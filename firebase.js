@@ -292,7 +292,7 @@ function createProductCard(product) {
                 <h3 class="product-name"><a href="#">${safeName}</a></h3>
                 <p class="product-description">${safeDescription}</p>
                 <div class="product-price">$${price}</div>
-                <button class="btn btn-block btn-cart">Add to Cart</button>
+                <button class="btn btn-block btn-cart" id="cart-btn">Add to Cart</button>
             </div>
         </div>
     `;
@@ -431,3 +431,5 @@ function googleSignIn(event) {
             alert(error.message);
         });
 }
+
+

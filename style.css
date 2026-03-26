@@ -1231,6 +1231,7 @@ img {
     .feature-strip-grid {
         grid-template-columns: 1fr;
     }
+
 }
 
 @media (max-width: 768px) {
@@ -1267,7 +1268,7 @@ img {
     .product-grid {
         grid-template-columns: repeat(2, 1fr);
     }
-    
+
     .footer-grid {
         grid-template-columns: 1fr 1fr;
     }
