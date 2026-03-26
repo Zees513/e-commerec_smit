@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LUMIÈRE | Premium Fashion</title>
+    <meta name="description" content="Discover premium, stylish, and high-end fashion with LUMIÈRE.">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- 1. Navbar -->
+    <header class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <a href="#home">LUMIÈRE</a>
+            </div>
+            
+            <!-- Mobile Menu Toggle (Checkbox Hack for pure CSS) -->
+            <input type="checkbox" id="menu-toggle" class="menu-toggle">
+            <label for="menu-toggle" class="menu-icon"><i class="fas fa-bars"></i></label>
+            
+            <nav class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#men">Men</a>
+                <a href="#women">Women</a>
+                <a href="#new-arrivals">New Arrivals</a>
+                <a href="#sale" class="sale-link">Sale</a>
+                <a href="#contact">Contact</a>
+            </nav>
+            
+            <div class="nav-icons">
+                <a href="#" aria-label="Search"><i class="fas fa-search"></i></a>
+                <a href="login.html" aria-label="User Profile"><i class="far fa-user"></i></a>
+                <a href="#" aria-label="Shopping Cart" class="cart-icon">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span class="cart-count">2</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- 2. Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-slider">
+            <!-- Slide 1 -->
+            <div class="hero-slide slide-1">
+                <div class="hero-bg" style="background-image: url('./images/hero.png');"></div>
+                <div class="hero-overlay"></div>
+                <div class="hero-content">
+                    <span class="hero-subtitle">New Collection 2026</span>
+                    <h1 class="hero-title">Redefine Your Style</h1>
+                    <p class="hero-text">Experience the luxury of modern fashion. Elegance, comfort, and bold aesthetics tailored for you.</p>
+                    <div class="hero-buttons">
+                        <a href="#products" class="btn btn-primary">Shop Now</a>
+                        <a href="#collections" class="btn btn-outline">Explore Collection</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Slide 2 -->
+            <div class="hero-slide slide-2">
+                <div class="hero-bg" style="background-image: url('https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?q=80&w=2670&auto=format&fit=crop');"></div>
+                <div class="hero-overlay"></div>
+                <div class="hero-content">
+                    <span class="hero-subtitle">Premium Comfort</span>
+                    <h1 class="hero-title">Elevate Everyday</h1>
+                    <p class="hero-text">Discover minimalist designs with uncompromising quality perfect for every occasion.</p>
+                    <div class="hero-buttons">
+                        <a href="#women" class="btn btn-primary">Women's Collection</a>
+                        <a href="#men" class="btn btn-outline">Men's Collection</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="hero-slide slide-3">
+                <div class="hero-bg" style="background-image: url('https://images.unsplash.com/photo-1445205170230-053b83016050?q=80&w=2671&auto=format&fit=crop');"></div>
+                <div class="hero-overlay"></div>
+                <div class="hero-content">
+                    <span class="hero-subtitle">Limited Edition</span>
+                    <h1 class="hero-title">Autumn Exclusives</h1>
+                    <p class="hero-text">Step out in confidence with our latest seasonal drops designed to make a statement.</p>
+                    <div class="hero-buttons">
+                        <a href="#sale" class="btn btn-primary">View Offers</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Featured / Categories Section -->
+    <section id="collections" class="categories section-padding">
+        <div class="container">
+            <div class="section-header">
+                <h2>Shop by Category</h2>
+                <div class="header-line"></div>
+            </div>
+            <div class="category-grid">
+                <a href="#women" class="category-card">
+                    <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?q=80&w=2670&auto=format&fit=crop" alt="Women's Collection">
+                    <div class="category-content">
+                        <h3>Women's Collection</h3>
+                        <span class="category-link">Discover More <i class="fas fa-arrow-right"></i></span>
+                    </div>
+                </a>
+                <a href="#men" class="category-card">
+                    <img src="https://images.unsplash.com/photo-1617137968427-85924c800a22?q=80&w=1287&auto=format&fit=crop" alt="Men's Collection">
+                    <div class="category-content">
+                        <h3>Men's Collection</h3>
+                        <span class="category-link">Discover More <i class="fas fa-arrow-right"></i></span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Product Section -->
+    <section id="products" class="products section-padding bg-light">
+        <div class="container">
+            <div class="section-header">
+                <h2>Trending Now</h2>
+                <div class="header-line"></div>
+                <p>Curated essentials for your everyday elegance.</p>
+            </div>
+            
+            <div class="product-grid">
+                <!-- Product 1 -->
+                <div class="product-card">
+                    <div class="product-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?q=80&w=1336&auto=format&fit=crop" alt="Classic Leather Jacket" class="product-img">
+                        <div class="product-badges">
+                            <span class="badge new">New</span>
+                        </div>
+                        <div class="product-actions">
+                            <button class="action-btn" aria-label="Add to Wishlist"><i class="far fa-heart"></i></button>
+                            <button class="action-btn" aria-label="Quick View"><i class="far fa-eye"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Men's Outerwear</span>
+                        <h3 class="product-name"><a href="#">Classic Leather Jacket</a></h3>
+                        <div class="product-price">$245.00</div>
+                        <button class="btn btn-block btn-cart">Add to Cart</button>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="product-card">
+                    <div class="product-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1550639525-c97d455acf70?q=80&w=1526&auto=format&fit=crop" alt="Silk Evening Dress" class="product-img">
+                        <div class="product-badges"></div>
+                        <div class="product-actions">
+                            <button class="action-btn" aria-label="Add to Wishlist"><i class="far fa-heart"></i></button>
+                            <button class="action-btn" aria-label="Quick View"><i class="far fa-eye"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Women's Dresses</span>
+                        <h3 class="product-name"><a href="#">Silk Evening Dress</a></h3>
+                        <div class="product-price">$310.00</div>
+                        <button class="btn btn-block btn-cart">Add to Cart</button>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="product-card">
+                    <div class="product-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1603252109303-2751441dd157?q=80&w=1287&auto=format&fit=crop" alt="Oxford Cotton Shirt" class="product-img">
+                        <div class="product-badges">
+                            <span class="badge sale">-20%</span>
+                        </div>
+                        <div class="product-actions">
+                            <button class="action-btn" aria-label="Add to Wishlist"><i class="far fa-heart"></i></button>
+                            <button class="action-btn" aria-label="Quick View"><i class="far fa-eye"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Men's Top</span>
+                        <h3 class="product-name"><a href="#">Oxford Cotton Shirt</a></h3>
+                        <div class="product-price">
+                            <span class="price-discounted">$85.00</span>
+                            <span class="price-original">$106.25</span>
+                        </div>
+                        <button class="btn btn-block btn-cart">Add to Cart</button>
+                    </div>
+                </div>
+
+                <!-- Product 4 -->
+                <div class="product-card">
+                    <div class="product-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1584916201218-f4242ceb4809?q=80&w=1315&auto=format&fit=crop" alt="Premium Leather Tote" class="product-img">
+                        <div class="product-badges"></div>
+                        <div class="product-actions">
+                            <button class="action-btn" aria-label="Add to Wishlist"><i class="far fa-heart"></i></button>
+                            <button class="action-btn" aria-label="Quick View"><i class="far fa-eye"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Accessories</span>
+                        <h3 class="product-name"><a href="#">Premium Leather Tote</a></h3>
+                        <div class="product-price">$150.00</div>
+                        <button class="btn btn-block btn-cart">Add to Cart</button>
+                    </div>
+                </div>
+
+                <!-- Product 5 -->
+                <div class="product-card">
+                    <div class="product-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1608256246200-53e635b5b65f?q=80&w=1287&auto=format&fit=crop" alt="Minimalist Sneakers" class="product-img">
+                        <div class="product-badges">
+                            <span class="badge new">New</span>
+                        </div>
+                        <div class="product-actions">
+                            <button class="action-btn" aria-label="Add to Wishlist"><i class="far fa-heart"></i></button>
+                            <button class="action-btn" aria-label="Quick View"><i class="far fa-eye"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Men's Footwear</span>
+                        <h3 class="product-name"><a href="#">Minimalist Sneakers</a></h3>
+                        <div class="product-price">$120.00</div>
+                        <button class="btn btn-block btn-cart">Add to Cart</button>
+                    </div>
+                </div>
+
+                <!-- Product 6 -->
+                <div class="product-card">
+                    <div class="product-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1511499767150-a48a237f0083?q=80&w=1480&auto=format&fit=crop" alt="Designer Sunglasses" class="product-img">
+                        <div class="product-badges"></div>
+                        <div class="product-actions">
+                            <button class="action-btn" aria-label="Add to Wishlist"><i class="far fa-heart"></i></button>
+                            <button class="action-btn" aria-label="Quick View"><i class="far fa-eye"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Accessories</span>
+                        <h3 class="product-name"><a href="#">Designer Sunglasses</a></h3>
+                        <div class="product-price">$190.00</div>
+                        <button class="btn btn-block btn-cart">Add to Cart</button>
+                    </div>
+                </div>
+                
+                <!-- Product 7 -->
+                <div class="product-card">
+                    <div class="product-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1524805444758-089113d48a6d?q=80&w=1288&auto=format&fit=crop" alt="Chronograph Watch" class="product-img">
+                        <div class="product-badges"></div>
+                        <div class="product-actions">
+                            <button class="action-btn" aria-label="Add to Wishlist"><i class="far fa-heart"></i></button>
+                            <button class="action-btn" aria-label="Quick View"><i class="far fa-eye"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Accessories</span>
+                        <h3 class="product-name"><a href="#">Chronograph Watch</a></h3>
+                        <div class="product-price">$350.00</div>
+                        <button class="btn btn-block btn-cart">Add to Cart</button>
+                    </div>
+                </div>
+
+                <!-- Product 8 -->
+                <div class="product-card">
+                    <div class="product-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1521191566897-40c2d3a9bdff?q=80&w=1481&auto=format&fit=crop" alt="Wide Brim Fedora" class="product-img">
+                        <div class="product-badges">
+                            <span class="badge sale">-30%</span>
+                        </div>
+                        <div class="product-actions">
+                            <button class="action-btn" aria-label="Add to Wishlist"><i class="far fa-heart"></i></button>
+                            <button class="action-btn" aria-label="Quick View"><i class="far fa-eye"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Women's Accessories</span>
+                        <h3 class="product-name"><a href="#">Wide Brim Fedora</a></h3>
+                        <div class="product-price">
+                            <span class="price-discounted">$45.50</span>
+                            <span class="price-original">$65.00</span>
+                        </div>
+                        <button class="btn btn-block btn-cart">Add to Cart</button>
+                    </div>
+                </div>
+                
+            </div>
+            
+            <div class="btn-container center mt-5">
+                <a href="#all-products" class="btn btn-outline-dark">View All Products</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Promotional Banner -->
+    <section class="promo-banner">
+        <div class="promo-content container">
+            <h2 class="promo-title">Mid-Season Sale</h2>
+            <p class="promo-desc">Up to 50% off on selected items across all categories.</p>
+            <div class="promo-timer">
+                <div class="time-box">
+                    <span class="time-num">03</span>
+                    <span class="time-text">Days</span>
+                </div>
+                <div class="time-box">
+                    <span class="time-num">12</span>
+                    <span class="time-text">Hours</span>
+                </div>
+                <div class="time-box">
+                    <span class="time-num">45</span>
+                    <span class="time-text">Mins</span>
+                </div>
+            </div>
+            <a href="#sale" class="btn btn-primary">Shop The Sale</a>
+        </div>
+    </section>
+
+    <!-- 6. Newsletter Section -->
+    <section class="newsletter section-padding">
+        <div class="container newsletter-container">
+            <div class="newsletter-text">
+                <h2>Join the LUMIÈRE Club</h2>
+                <p>Subscribe to receive updates, access to exclusive deals, and more.</p>
+            </div>
+            <form class="newsletter-form">
+                <input type="email" placeholder="Enter your email address" required class="newsletter-input">
+                <button type="submit" class="newsletter-btn">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- 7. Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#home" class="footer-logo">LUMIÈRE</a>
+                    <p class="footer-about">Redefining modern luxury fashion with elegance and uncompromising quality. Dress to express your true self.</p>
+                    <div class="social-icons">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Pinterest"><i class="fab fa-pinterest-p"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#blog">Blog</a></li>
+                        <li><a href="#careers">Careers</a></li>
+                        <li><a href="#stores">Store Locator</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h3>Customer Service</h3>
+                    <ul>
+                        <li><a href="#faq">FAQ</a></li>
+                        <li><a href="#shipping">Shipping & Returns</a></li>
+                        <li><a href="#track">Track Order</a></li>
+                        <li><a href="#privacy">Privacy Policy</a></li>
+                        <li><a href="#terms">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-contact">
+                    <h3>Contact Us</h3>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Fashion Ave, New York, NY 10001</li>
+                        <li><i class="fas fa-phone"></i> +1 (800) 123-4567</li>
+                        <li><i class="fas fa-envelope"></i> hello@lumiere.com</li>
+                        <li><i class="far fa-clock"></i> Mon-Fri: 9:00 AM - 6:00 PM</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 LUMIÈRE Fashion. All Rights Reserved.</p>
+                <div class="payment-methods">
+                    <i class="fab fa-cc-visa"></i>
+                    <i class="fab fa-cc-mastercard"></i>
+                    <i class="fab fa-cc-amex"></i>
+                    <i class="fab fa-cc-paypal"></i>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="./firebase.js" type="module"></script>
+</body>
+</html>
