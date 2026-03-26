@@ -26,12 +26,12 @@
             <label for="menu-toggle" class="menu-icon"><i class="fas fa-bars"></i></label>
             
             <nav class="nav-links">
-                <a href="#home">Home</a>
-                <a href="#men">Men</a>
-                <a href="#women">Women</a>
+                <a href="#home" class="filter-btn" data-filter="All">Home</a>
+                <a href="#products" class="filter-btn" data-filter="Men">Men</a>
+                <a href="#products" class="filter-btn" data-filter="Women">Women</a>
                 <a href="#new-arrivals">New Arrivals</a>
                 <a href="#sale" class="sale-link">Sale</a>
-                <a href="#contact">Contact</a>
+                <a href="#" id="openAddProductModalBtn">Add Product</a>
             </nav>
             
             <div class="nav-icons">
@@ -53,6 +53,7 @@
                 <div class="hero-bg" style="background-image: url('./images/hero.png');"></div>
                 <div class="hero-overlay"></div>
                 <div class="hero-content">
+                    <span class="hero-kicker">Luxury Fashion House</span>
                     <span class="hero-subtitle">New Collection 2026</span>
                     <h1 class="hero-title">Redefine Your Style</h1>
                     <p class="hero-text">Experience the luxury of modern fashion. Elegance, comfort, and bold aesthetics tailored for you.</p>
@@ -60,6 +61,25 @@
                         <a href="#products" class="btn btn-primary">Shop Now</a>
                         <a href="#collections" class="btn btn-outline">Explore Collection</a>
                     </div>
+                    <div class="hero-highlights">
+                        <div class="hero-highlight">
+                            <strong>240+</strong>
+                            <span>Curated pieces</span>
+                        </div>
+                        <div class="hero-highlight">
+                            <strong>18</strong>
+                            <span>Signature drops</span>
+                        </div>
+                        <div class="hero-highlight">
+                            <strong>4.9</strong>
+                            <span>Client rating</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-editorial-card">
+                    <span class="editorial-label">Editor's Select</span>
+                    <h3>Tailored silhouettes, cinematic textures, and statement essentials for modern icons.</h3>
+                    <p>Built to feel like a luxury storefront, not a template.</p>
                 </div>
             </div>
             
@@ -72,8 +92,8 @@
                     <h1 class="hero-title">Elevate Everyday</h1>
                     <p class="hero-text">Discover minimalist designs with uncompromising quality perfect for every occasion.</p>
                     <div class="hero-buttons">
-                        <a href="#women" class="btn btn-primary">Women's Collection</a>
-                        <a href="#men" class="btn btn-outline">Men's Collection</a>
+                        <a href="#products" class="btn btn-primary filter-btn" data-filter="Women">Women's Collection</a>
+                        <a href="#products" class="btn btn-outline filter-btn" data-filter="Men">Men's Collection</a>
                     </div>
                 </div>
             </div>
@@ -98,18 +118,19 @@
     <section id="collections" class="categories section-padding">
         <div class="container">
             <div class="section-header">
+                <span class="section-eyebrow">Curated Categories</span>
                 <h2>Shop by Category</h2>
                 <div class="header-line"></div>
             </div>
             <div class="category-grid">
-                <a href="#women" class="category-card">
+                <a href="#products" class="category-card filter-btn" data-filter="Women">
                     <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?q=80&w=2670&auto=format&fit=crop" alt="Women's Collection">
                     <div class="category-content">
                         <h3>Women's Collection</h3>
                         <span class="category-link">Discover More <i class="fas fa-arrow-right"></i></span>
                     </div>
                 </a>
-                <a href="#men" class="category-card">
+                <a href="#products" class="category-card filter-btn" data-filter="Men">
                     <img src="https://images.unsplash.com/photo-1617137968427-85924c800a22?q=80&w=1287&auto=format&fit=crop" alt="Men's Collection">
                     <div class="category-content">
                         <h3>Men's Collection</h3>
@@ -124,174 +145,24 @@
     <section id="products" class="products section-padding bg-light">
         <div class="container">
             <div class="section-header">
-                <h2>Trending Now</h2>
+                <span class="section-eyebrow">Realtime Catalog</span>
+                <h2>All Products</h2>
                 <div class="header-line"></div>
-                <p>Curated essentials for your everyday elegance.</p>
+                <p>Add products from the navbar modal and filter them instantly by category.</p>
             </div>
-            
-            <div class="product-grid">
-                <!-- Product 1 -->
-                <div class="product-card">
-                    <div class="product-image-wrapper">
-                        <img src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?q=80&w=1336&auto=format&fit=crop" alt="Classic Leather Jacket" class="product-img">
-                        <div class="product-badges">
-                            <span class="badge new">New</span>
-                        </div>
-                        <div class="product-actions">
-                            <button class="action-btn" aria-label="Add to Wishlist"><i class="far fa-heart"></i></button>
-                            <button class="action-btn" aria-label="Quick View"><i class="far fa-eye"></i></button>
-                        </div>
-                    </div>
-                    <div class="product-info">
-                        <span class="product-category">Men's Outerwear</span>
-                        <h3 class="product-name"><a href="#">Classic Leather Jacket</a></h3>
-                        <div class="product-price">$245.00</div>
-                        <button class="btn btn-block btn-cart">Add to Cart</button>
-                    </div>
+            <div class="catalog-toolbar">
+                <div class="filter-pill-group" aria-label="Product category filters">
+                    <button class="filter-pill active" data-filter="All" type="button">All</button>
+                    <button class="filter-pill" data-filter="Men" type="button">Men</button>
+                    <button class="filter-pill" data-filter="Women" type="button">Women</button>
                 </div>
-
-                <!-- Product 2 -->
-                <div class="product-card">
-                    <div class="product-image-wrapper">
-                        <img src="https://images.unsplash.com/photo-1550639525-c97d455acf70?q=80&w=1526&auto=format&fit=crop" alt="Silk Evening Dress" class="product-img">
-                        <div class="product-badges"></div>
-                        <div class="product-actions">
-                            <button class="action-btn" aria-label="Add to Wishlist"><i class="far fa-heart"></i></button>
-                            <button class="action-btn" aria-label="Quick View"><i class="far fa-eye"></i></button>
-                        </div>
-                    </div>
-                    <div class="product-info">
-                        <span class="product-category">Women's Dresses</span>
-                        <h3 class="product-name"><a href="#">Silk Evening Dress</a></h3>
-                        <div class="product-price">$310.00</div>
-                        <button class="btn btn-block btn-cart">Add to Cart</button>
-                    </div>
-                </div>
-
-                <!-- Product 3 -->
-                <div class="product-card">
-                    <div class="product-image-wrapper">
-                        <img src="https://images.unsplash.com/photo-1603252109303-2751441dd157?q=80&w=1287&auto=format&fit=crop" alt="Oxford Cotton Shirt" class="product-img">
-                        <div class="product-badges">
-                            <span class="badge sale">-20%</span>
-                        </div>
-                        <div class="product-actions">
-                            <button class="action-btn" aria-label="Add to Wishlist"><i class="far fa-heart"></i></button>
-                            <button class="action-btn" aria-label="Quick View"><i class="far fa-eye"></i></button>
-                        </div>
-                    </div>
-                    <div class="product-info">
-                        <span class="product-category">Men's Top</span>
-                        <h3 class="product-name"><a href="#">Oxford Cotton Shirt</a></h3>
-                        <div class="product-price">
-                            <span class="price-discounted">$85.00</span>
-                            <span class="price-original">$106.25</span>
-                        </div>
-                        <button class="btn btn-block btn-cart">Add to Cart</button>
-                    </div>
-                </div>
-
-                <!-- Product 4 -->
-                <div class="product-card">
-                    <div class="product-image-wrapper">
-                        <img src="https://images.unsplash.com/photo-1584916201218-f4242ceb4809?q=80&w=1315&auto=format&fit=crop" alt="Premium Leather Tote" class="product-img">
-                        <div class="product-badges"></div>
-                        <div class="product-actions">
-                            <button class="action-btn" aria-label="Add to Wishlist"><i class="far fa-heart"></i></button>
-                            <button class="action-btn" aria-label="Quick View"><i class="far fa-eye"></i></button>
-                        </div>
-                    </div>
-                    <div class="product-info">
-                        <span class="product-category">Accessories</span>
-                        <h3 class="product-name"><a href="#">Premium Leather Tote</a></h3>
-                        <div class="product-price">$150.00</div>
-                        <button class="btn btn-block btn-cart">Add to Cart</button>
-                    </div>
-                </div>
-
-                <!-- Product 5 -->
-                <div class="product-card">
-                    <div class="product-image-wrapper">
-                        <img src="https://images.unsplash.com/photo-1608256246200-53e635b5b65f?q=80&w=1287&auto=format&fit=crop" alt="Minimalist Sneakers" class="product-img">
-                        <div class="product-badges">
-                            <span class="badge new">New</span>
-                        </div>
-                        <div class="product-actions">
-                            <button class="action-btn" aria-label="Add to Wishlist"><i class="far fa-heart"></i></button>
-                            <button class="action-btn" aria-label="Quick View"><i class="far fa-eye"></i></button>
-                        </div>
-                    </div>
-                    <div class="product-info">
-                        <span class="product-category">Men's Footwear</span>
-                        <h3 class="product-name"><a href="#">Minimalist Sneakers</a></h3>
-                        <div class="product-price">$120.00</div>
-                        <button class="btn btn-block btn-cart">Add to Cart</button>
-                    </div>
-                </div>
-
-                <!-- Product 6 -->
-                <div class="product-card">
-                    <div class="product-image-wrapper">
-                        <img src="https://images.unsplash.com/photo-1511499767150-a48a237f0083?q=80&w=1480&auto=format&fit=crop" alt="Designer Sunglasses" class="product-img">
-                        <div class="product-badges"></div>
-                        <div class="product-actions">
-                            <button class="action-btn" aria-label="Add to Wishlist"><i class="far fa-heart"></i></button>
-                            <button class="action-btn" aria-label="Quick View"><i class="far fa-eye"></i></button>
-                        </div>
-                    </div>
-                    <div class="product-info">
-                        <span class="product-category">Accessories</span>
-                        <h3 class="product-name"><a href="#">Designer Sunglasses</a></h3>
-                        <div class="product-price">$190.00</div>
-                        <button class="btn btn-block btn-cart">Add to Cart</button>
-                    </div>
-                </div>
-                
-                <!-- Product 7 -->
-                <div class="product-card">
-                    <div class="product-image-wrapper">
-                        <img src="https://images.unsplash.com/photo-1524805444758-089113d48a6d?q=80&w=1288&auto=format&fit=crop" alt="Chronograph Watch" class="product-img">
-                        <div class="product-badges"></div>
-                        <div class="product-actions">
-                            <button class="action-btn" aria-label="Add to Wishlist"><i class="far fa-heart"></i></button>
-                            <button class="action-btn" aria-label="Quick View"><i class="far fa-eye"></i></button>
-                        </div>
-                    </div>
-                    <div class="product-info">
-                        <span class="product-category">Accessories</span>
-                        <h3 class="product-name"><a href="#">Chronograph Watch</a></h3>
-                        <div class="product-price">$350.00</div>
-                        <button class="btn btn-block btn-cart">Add to Cart</button>
-                    </div>
-                </div>
-
-                <!-- Product 8 -->
-                <div class="product-card">
-                    <div class="product-image-wrapper">
-                        <img src="https://images.unsplash.com/photo-1521191566897-40c2d3a9bdff?q=80&w=1481&auto=format&fit=crop" alt="Wide Brim Fedora" class="product-img">
-                        <div class="product-badges">
-                            <span class="badge sale">-30%</span>
-                        </div>
-                        <div class="product-actions">
-                            <button class="action-btn" aria-label="Add to Wishlist"><i class="far fa-heart"></i></button>
-                            <button class="action-btn" aria-label="Quick View"><i class="far fa-eye"></i></button>
-                        </div>
-                    </div>
-                    <div class="product-info">
-                        <span class="product-category">Women's Accessories</span>
-                        <h3 class="product-name"><a href="#">Wide Brim Fedora</a></h3>
-                        <div class="product-price">
-                            <span class="price-discounted">$45.50</span>
-                            <span class="price-original">$65.00</span>
-                        </div>
-                        <button class="btn btn-block btn-cart">Add to Cart</button>
-                    </div>
-                </div>
-                
+                <p id="activeFilterLabel" class="active-filter-label">Showing all products</p>
             </div>
-            
-            <div class="btn-container center mt-5">
-                <a href="#all-products" class="btn btn-outline-dark">View All Products</a>
+
+            <div id="productsStatus" class="products-status" aria-live="polite"></div>
+
+            <div id="dynamic-products-container" class="product-grid dynamic-product-grid">
+                <!-- Products loaded from Firebase Realtime Database -->
             </div>
         </div>
     </section>
@@ -299,6 +170,7 @@
     <!-- 5. Promotional Banner -->
     <section class="promo-banner">
         <div class="promo-content container">
+            <span class="section-eyebrow light">Season Spotlight</span>
             <h2 class="promo-title">Mid-Season Sale</h2>
             <p class="promo-desc">Up to 50% off on selected items across all categories.</p>
             <div class="promo-timer">
@@ -323,6 +195,7 @@
     <section class="newsletter section-padding">
         <div class="container newsletter-container">
             <div class="newsletter-text">
+                <span class="section-eyebrow">Private Access</span>
                 <h2>Join the LUMIÈRE Club</h2>
                 <p>Subscribe to receive updates, access to exclusive deals, and more.</p>
             </div>
@@ -393,6 +266,42 @@
         </div>
     </footer>
 
+    <!-- Add Product Modal -->
+    <div id="addProductModal" class="modal">
+        <div class="modal-content">
+            <button class="close-modal" type="button" aria-label="Close add product modal">&times;</button>
+            <div class="modal-badge">New Product</div>
+            <h2 class="modal-title">Create a Product Card</h2>
+            <p class="modal-subtitle">Add a product once and it appears instantly in your store with live Men and Women filtering.</p>
+            <form id="addProductForm">
+                <div class="form-group">
+                    <label for="prodName">Name</label>
+                    <input type="text" id="prodName" placeholder="Classic Linen Shirt" required>
+                </div>
+                <div class="form-group">
+                    <label for="prodPrice">Price ($)</label>
+                    <input type="number" id="prodPrice" placeholder="129" min="0" step="0.01" required>
+                </div>
+                <div class="form-group">
+                    <label for="prodDesc">Description</label>
+                    <textarea id="prodDesc" placeholder="Write a short premium description for this product." required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="prodImage">Image URL</label>
+                    <input type="url" id="prodImage" placeholder="https://images.unsplash.com/..." required>
+                </div>
+                <div class="form-group">
+                    <label for="prodCategory">Category</label>
+                    <select id="prodCategory" required>
+                        <option value="Men">Men</option>
+                        <option value="Women">Women</option>
+                    </select>
+                </div>
+                <p id="productFormMessage" class="form-message" aria-live="polite"></p>
+                <button type="submit" class="btn btn-primary btn-block modal-submit-btn">Add Product</button>
+            </form>
+        </div>
+    </div>
 
     <script src="./firebase.js" type="module"></script>
 </body>
