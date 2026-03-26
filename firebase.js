@@ -38,6 +38,7 @@ document.addEventListener("DOMContentLoaded", () => {
     setupProductModal();
     setupProductForm();
     setupProductFilters();
+    setupSaleCountdown();
     subscribeToProducts();
 });
 
@@ -159,6 +160,43 @@ function setupProductFilters() {
     });
 
     syncFilterUI();
+}
+
+function setupSaleCountdown() {
+    const daysValue = document.getElementById("daysValue");
+    const hoursValue = document.getElementById("hoursValue");
+    const minutesValue = document.getElementById("minutesValue");
+
+    if (!daysValue || !hoursValue || !minutesValue) {
+        return;
+    }
+
+    const targetDate = new Date();
+    targetDate.setDate(targetDate.getDate() + 4);
+    targetDate.setHours(23, 59, 0, 0);
+
+    const updateCountdown = () => {
+        const distance = targetDate.getTime() - Date.now();
+
+        if (distance <= 0) {
+            daysValue.textContent = "00";
+            hoursValue.textContent = "00";
+            minutesValue.textContent = "00";
+            return;
+        }
+
+        const totalMinutes = Math.floor(distance / (1000 * 60));
+        const days = Math.floor(totalMinutes / (60 * 24));
+        const hours = Math.floor((totalMinutes % (60 * 24)) / 60);
+        const minutes = totalMinutes % 60;
+
+        daysValue.textContent = String(days).padStart(2, "0");
+        hoursValue.textContent = String(hours).padStart(2, "0");
+        minutesValue.textContent = String(minutes).padStart(2, "0");
+    };
+
+    updateCountdown();
+    window.setInterval(updateCountdown, 60 * 1000);
 }
 
 function subscribeToProducts() {
